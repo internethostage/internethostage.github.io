@@ -1,0 +1,30 @@
+<footer role="contentinfo">
+  <div class="row">
+    <div class="row-content buffer clear-after">
+      <section id="top-footer">
+        <div class="widget column three">
+        </div>
+        <div class="widget column three">
+          <h4>Menu</h4>
+          <ul class="plain">
+            <li><a href="{{site_url}}/">Home</a></li>
+            <li><a href="{{site_url}}/blog">Blog</a></li>
+            <li><a href="{{site_url}}/resume">Resume</a></li>
+            <li><a href="{{site_url}}/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="widget meta-social column three">
+          <h4>Connect</h4>
+          <ul class="inline">
+            {% if site.owner.twitter %} <li><a href="https://twitter.com/{{ site.owner.twitter }}" class="twitter-share border-box" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li> {% endif %}
+            {% if site.owner.github %} <li><a href="https://github.com/{{site.owner.github}}" class="github-share border-box" target="_blank"><i class="fa fa-github fa-lg"></i></a></li> {% endif %}
+          </ul>
+        </div>
+      </section><!-- top-footer -->
+      <section id="bottom-footer">
+        <p class="centertxt">{{ site.time | date: '%Y' }} <a href="{{ site.url }}">{{ site.title }}</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>. All Rights Reserved.</p>
+        <p class="keep-right"></p>
+      </section><!-- bottom-footer -->
+    </div><!-- row-content -->
+  </div><!-- row -->
+</footer>

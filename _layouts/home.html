@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+	<body class="page">
+
+    {% include navbar.html %}
+
+		<main role="main">
+			<div id="intro-wrap">
+	        <div id="intro" class="preload darken more-button">
+	          <div class="intro-item" style="background-image: url({{site_url}}/img/rails.jpg);">
+	            <div class="caption">
+	              <h2>Cristian Guerrero</h2>
+	              <p><em>Web Developer</em></p>
+	            </div><!-- caption -->
+	          </div>
+	        </div><!-- intro -->
+	      </div><!-- intro-wrap -->
+
+			<div id="main">
+
+				<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="section-title"><h3>Latest Posts</h3></div>
+						<div class="grid-items blog-section masonry-style preload">
+
+							{% for post in site.posts limit:1 %}
+								{% include post-item-big.html %}
+							{% endfor %}
+
+							{% for post in site.posts offset:1 limit:2 %}
+								{% include post-item-small.html %}
+							{% endfor %}
+
+							{% for post in site.posts offset:3 limit:1 %}
+								{% include post-item-big.html %}
+							{% endfor %}
+
+							{% for post in site.posts offset:4 limit:2 %}
+								{% include post-item-small.html %}
+							{% endfor %}
+							<div class="shuffle-sizer three"></div>
+						</div><!-- grid-items -->
+						<div class="more-btn"><a class="button transparent aqua" href="{{site_url}}/blog">See all Posts</a></div>
+					</div>
+				</section>
+
+				<section class="row section call-to-action">
+					<div class="row-content buffer even animation">
+						<p>Want to get in touch with me?</p>
+						<a class="button red" href="{{site_url}}/contact">Contact</a>
+					</div>
+				</section>
+
+				<section class="row section">
+					<div class="map" data-maplat="50.120796" data-maplon="-122.9535857" data-mapzoom="11" data-color="" data-height="22.222" data-img="{{site_url}}/img/marker.png" data-info="Greetings from Whistler!"></div>
+				</section>
+
+			</div><!-- id-main -->
+		</main><!-- main -->
+
+		{% include footer.html %}
+
+		{% include footer_scripts.html %}
+
+	</body>
+
+</html>

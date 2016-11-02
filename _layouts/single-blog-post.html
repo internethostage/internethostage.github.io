@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	{% include head.html %}
+
+	<body class="single single-post">
+
+		{% include navbar.html %}
+
+		<main role="main">
+			{% if page.image.feature %}
+				<div id="intro-wrap">
+	        <div id="intro" class="preload darken more-button">
+	          <div class="intro-item" style="background-image: url({{site_url}}/img/{{page.image.feature}});">
+	            <div class="caption">
+	              <h2>{{page.title}}</h2>
+	            </div><!-- caption -->
+	          </div>
+	        </div><!-- intro -->
+	      </div><!-- intro-wrap -->
+	    {% endif %}
+
+			<div id="main" class="row">
+				<div class="row-content buffer-left buffer-right buffer-bottom">
+					<div id="post-nav">
+						<ul class="clear-after reset plain">
+							{% if page.previous.url %}
+								<li id="prev-items" class="post-nav"><a href="{{page.previous.url}}"><i class="fa fa-chevron-left"></i><span class="label">Prev</span></a></li>
+							{% endif %}
+							<li id="all-items" class="post-nav"><a href="{{site_url}}/blog"><i class="icon icon-images"></i></a></li>
+							{% if page.next.url %}
+								<li id="next-items" class="post-nav"><a href="{{page.next.url}}"><span class="label">Next</span><i class="fa fa-chevron-right"></i></a></li>
+							{% endif %}
+						</ul>
+					</div>
+
+					<div class="post-area clear-after">
+						<article role="main">
+							<h5 class="meta-post">{% if page.modified %}<time datetime="{{ page.modified | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="dateModified">{{ page.modified | date: "%B %d, %Y" }}</time>{% else %}<time datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%SZ" }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time></p>{% endif %}</h5>
+							<h1>{{page.title }}</h1>
+							{{ content }}
+						</article>
+
+					</div><!-- post-area -->
+
+					{% include social_share_buttons.html %}
+
+					{% include comments.html %}
+
+					<div class="related clear-after">
+						<h4>Recent Posts</h4>
+						{% for post in site.posts limit:3 %}
+							<div class="item {% if forloop.index == 3 %}last{% endif %}">
+								<figure><img src="{{ site.url }}/img/{{ post.image.teaser }}" alt=""></figure>
+								<a class="overlay" href="{{ site.url }}{{ post.url }}">
+									<div class="overlay-content">
+										<div class="post-type"><i class="icon icon-doc"></i></div>
+										<h2>{{ post.title }}</h2>
+										<p>{{ post.excerpt | truncate: 160 }}</p>
+									</div><!-- overlay-content -->
+								</a><!-- overlay -->
+							</div>
+						{% endfor %}
+					</div>
+
+
+				</div><!-- row-content -->
+			</div><!-- row -->
+		</main><!-- main -->
+
+		{% include footer.html %}
+
+		{% include footer_scripts.html %}
+
+	</body>
+
+</html>
