@@ -3468,6 +3468,10 @@ footer .row-content.buffer {
         margin-top: 200px;
     }
 
+    #intro .blog h2 {
+      margin-top: 120px !important;
+    }
+
     #intro .caption p,
     #intro .caption-mockup p {
         font-size: 0.8em;
