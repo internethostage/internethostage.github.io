@@ -1,7 +1,7 @@
 <section class="row section">
   <div class="row-content buffer even clear-after">
     <div class="section-title"><h3>Contact Me</h3></div>
-    {{ content }}
+    <p>If you have any questions or comments, or just want to connect, feel free to send me a message on the form below!</p>
     <div class="column nine">
       <form action="https://getsimpleform.com/messages?form_api_token=12cd47007d69851e16a3cf846fbdea8c" method="post" id="contact-form" class="contact-section">
         <!-- all your input fields here.... -->
@@ -26,6 +26,7 @@
         <h4>Connect</h4>
         <ul class="inline meta-social">
           {% if site.owner.twitter %} <li><a href="https://twitter.com/{{ site.owner.twitter }}" class="twitter-share border-box" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li> {% endif %}
+          {% if site.owner.linkedin %} <li><a href="https://ca.linkedin.com/in/{{ site.owner.linkedin }}" class="linkedin-share border-box" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li> {% endif %}
           {% if site.owner.github %} <li><a href="https://github.com/{{site.owner.github}}" class="github-share border-box" target="_blank"><i class="fa fa-github fa-lg"></i></a></li> {% endif %}
         </ul>
       </div>

@@ -10,7 +10,7 @@
     <main role="main">
       <div id="intro-wrap">
         <div id="intro" class="preload darken more-button">
-          <div class="intro-item" style="background-image: url({{site_url}}/img/old_computer.jpg);">
+          <div class="intro-item" style="background-image: url({{site_url}}/img/resume.jpg);">
             <div class="caption">
               <h2>Full Stack Web Developer</h2>
             </div><!-- caption -->
@@ -23,9 +23,13 @@
         <section class="row section">
           <div class="row-content buffer even clear-after">
             <div class="timeline-label column six">
-              <h4>Work experience</h4>
-              <p>Specialties : Rails, Test Driven Development, Deployment, Heroku, Continous Integration, Refactoring.</p>
-              {% if site.owner.github %}<a class="button transparent aqua" href="https://github.com/{{site.owner.github}}" target="_blank">View Github</a>{% endif %}
+              {{ content }}
+              {% if site.owner.github %}
+              <a class="button transparent aqua" href="https://github.com/{{site.owner.github}}" target="_blank"><i class="fa fa-github fa-lg"></i>View Github</a>
+              {% endif %}
+              {% if site.owner.linkedin %}
+              <a class="button transparent aqua" href="https://ca.linkedin.com/in/{{ site.owner.linkedin }}" target="_blank"><i class="fa fa-linkedin fa-lg"></i>View Linkedin</a>
+              {% endif %}
             </div><!-- timeline-label -->
             <div class="timeline column six last">
               <div class="year">
@@ -35,7 +39,7 @@
                   <div class="experience-img"><img src="{{site_url}}/img/guestfolio.png" alt=""></div>
                   <div class="experience-info clear-after">
                     <h5>Guestfolio</h5>
-                    <div class="role">Jr Web Developer</div>
+                    <div class="role">Jr. Web Developer</div>
                     <p>August 2016 – Current</p>
                   </div><!-- experience-info -->
                 </div><!-- experience -->
@@ -69,10 +73,6 @@
         </section>
 
         {% include contact_form.html %}
-
-        <section class="row section">
-          <div class="map" id="map_1" data-maplat="41.374774" data-maplon="-83.651323" data-mapzoom="5" data-color="aqua" data-height="22.222" data-img="img/marker.png" data-info="&hearts; from Ohio"></div>
-        </section>
 
       </div><!-- id-main -->
     </main><!-- main -->
