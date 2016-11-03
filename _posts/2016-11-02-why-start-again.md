@@ -6,7 +6,7 @@ excerpt: Why start again with a new blog? What has changed and what motivates me
 published: true
 image:
   feature: post-images/start.jpg
-  teaser: post-images/start_square.jpg
+  teaser: post-images/start_preview.jpg
 ---
 Starting a new blog is always an overwhelming and exciting adventure. On one side, you feel you must maintain it, and "this time I will make it work", and on the other side there are feelings of amazing topics to cover and ideas to add.
 
