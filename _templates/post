@@ -4,6 +4,8 @@ date: {{ date }}
 layout: single-blog-post
 excerpt:
 published: true
+category:
+tags:
 image:
   feature: post-images/
   teaser: post-images/
