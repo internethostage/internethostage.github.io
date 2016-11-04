@@ -5,7 +5,7 @@ description: There was a time where the Internet didn't exist
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale:
-url: https://internethostage.github.io
+url: https://internethostage.com
 # Jekyll configuration
 
 sass:
