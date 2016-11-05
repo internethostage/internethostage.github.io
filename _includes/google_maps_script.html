@@ -1,2 +1,2 @@
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCeMYuMWKen-JvDXk9C92tNnsC7yvBf4vc'></script>
+{% if site.owner.gmaps_key %} <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key={{site.owner.gmaps_key}}'></script> {% endif %}
 <script src="{{ site_url }}/js/infobox_min.js"></script>
